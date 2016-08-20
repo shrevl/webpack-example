@@ -8,6 +8,14 @@ module.exports = {
         path: path.join(__dirname, "dist"),
         filename: "main.js"
     },
+    module: {
+        loaders: [
+            {
+                test: /\.scss$/,
+                loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+            }
+        ]
+    },
     plugins: [new HtmlWebpackPlugin({
         template: "index.html"
     })]
