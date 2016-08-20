@@ -3,10 +3,11 @@ var path = require('path'),
 
 module.exports = {
     context: path.join(__dirname, 'app'),
+    devtool: "source-map",
     entry: "./js/app.js",
     output: {
         path: path.join(__dirname, "dist"),
-        filename: "[hash].main.js"
+        filename: "[hash].[name].js"
     },
     module: {
         loaders: [
@@ -24,7 +25,7 @@ module.exports = {
             }
         ]
     },
-    plugins: [new HtmlWebpackPlugin({
-        template: "index.html"
-    })]
+    plugins: [
+        new HtmlWebpackPlugin({ template: "index.html" })
+    ]
 };
