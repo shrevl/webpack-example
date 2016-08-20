@@ -6,7 +6,7 @@ module.exports = {
     entry: "./js/app.js",
     output: {
         path: path.join(__dirname, "dist"),
-        filename: "main.js"
+        filename: "[hash].main.js"
     },
     module: {
         loaders: [
