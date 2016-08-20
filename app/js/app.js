@@ -3,6 +3,6 @@ require('../scss/main.scss');
 var angular = require('angular'),
     app = angular.module('app', []);
 
-app.config(function() {
-    console.log('app.config');
+app.config(/*@ngInject*/ function($locationProvider) {
+    $locationProvider.html5Mode(true);
 });

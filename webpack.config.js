@@ -11,6 +11,10 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /app.*\.js$/, 
+                loader: 'ng-annotate'
+            },
+            {
                 test: /\.scss$/,
                 loaders: ["style", "css?sourceMap", "sass?sourceMap"]
             },
