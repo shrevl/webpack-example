@@ -1,2 +1,8 @@
 require('../scss/main.scss');
-console.log('app loaded');
+
+var angular = require('angular'),
+    app = angular.module('app', []);
+
+app.config(function() {
+    console.log('app.config');
+});
