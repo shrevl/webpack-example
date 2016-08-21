@@ -13,8 +13,13 @@ app.config(/*@ngInject*/ function($locationProvider, $stateProvider, $urlRouterP
         .state('submodule', { 
             url: '/submodule', 
             controller: 'SubmoduleCtrl',
+            controllerAs: 'submodule',
             template: require('./submodule/template.html') 
         });
 });
 
-app.controller('SubmoduleCtrl', require('./submodule/submodule.controller'));
+app
+    .controller('SubmoduleCtrl', require('./submodule/submodule.controller'))
+    .controller('ModalCtrl', require('./submodule/modal.controller'));
+
+module.exports = app;

@@ -1,13 +1,10 @@
 /* @ngInject */
-function SubmoduleCtrl($scope, $uibModal) {
-    $scope.open = function() {
+function SubmoduleCtrl($uibModal) {
+    this.open = function() {
         var modal = $uibModal.open({
             template: require('./modal.html'),
-            controller: /*@ngInject*/ function($scope) {
-                $scope.ok = function() {
-                    modal.close();
-                };
-            }
+            controller: 'ModalCtrl',
+            controllerAs: 'modal'
         })
     };
 }
