@@ -12,5 +12,5 @@ export default class SubmoduleController {
 			controller: 'ModalCtrl',
 			controllerAs: 'modal'
 		});
-	};
+	}
 }
