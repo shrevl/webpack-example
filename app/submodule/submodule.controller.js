@@ -1,4 +1,4 @@
-import template from './modal.html';
+import template from './modal/modal.html';
 
 /* @ngInject */
 export default function SubmoduleCtrl($uibModal) {

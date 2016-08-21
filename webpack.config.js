@@ -2,9 +2,8 @@ var path = require('path'),
     HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    context: path.join(__dirname, 'app'),
     devtool: "source-map",
-    entry: "./js/app.js",
+    entry: "./app/app.js",
     output: {
         path: path.join(__dirname, "dist"),
         filename: "[hash].[name].js"
@@ -31,6 +30,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: "index.html" })
+        new HtmlWebpackPlugin({ template: "./assets/html/index.html" })
     ]
 };

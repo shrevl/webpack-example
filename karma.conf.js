@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/js/app.js',
+      'app/app.js',
       './node_modules/angular-mocks/angular-mocks.js',
       'app/**/*.spec.js'
     ],
@@ -29,7 +29,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'app/js/app.js': ['webpack'],
+      'app/app.js': ['webpack'],
       'app/**/*.spec.js': ['webpack']
     },
 

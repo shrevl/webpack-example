@@ -2,9 +2,9 @@ import angular from 'angular';
 import router from 'angular-ui-router';
 import bootstrap from 'angular-ui-bootstrap';
 
+import ModalCtrl from './modal/modal.controller';
 import SubmoduleCtrl from './submodule.controller';
-import ModalCtrl from './modal.controller';
-import template from './template.html';
+import template from './submodule.template.html';
 
 var submodule = angular.module('app.submodule', [router, bootstrap]);
 

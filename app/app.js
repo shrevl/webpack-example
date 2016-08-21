@@ -1,5 +1,5 @@
-import '../scss/main.scss';
-import './submodule/submodule';
+import '../assets/scss/main.scss';
+import './submodule/module';
 
 import angular from 'angular';
 
