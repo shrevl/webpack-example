@@ -9,17 +9,17 @@ import template from './submodule.template.html';
 var submodule = angular.module('app.submodule', [router, bootstrap]);
 
 submodule.config(/*@ngInject*/ ($stateProvider) => {
-    $stateProvider
-        .state('submodule', { 
-            url: '/submodule', 
-            controller: 'SubmoduleCtrl',
-            controllerAs: 'submodule',
-            template: template
-        });
+	$stateProvider
+		.state('submodule', { 
+			url: '/submodule', 
+			controller: 'SubmoduleCtrl',
+			controllerAs: 'submodule',
+			template: template
+		});
 });
 
 submodule
-    .controller('SubmoduleCtrl', SubmoduleCtrl)
-    .controller('ModalCtrl', ModalCtrl);
+	.controller('SubmoduleCtrl', SubmoduleCtrl)
+	.controller('ModalCtrl', ModalCtrl);
 
 export default submodule;
