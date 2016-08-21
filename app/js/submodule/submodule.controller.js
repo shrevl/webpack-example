@@ -1,12 +1,12 @@
+import template from './modal.html';
+
 /* @ngInject */
-function SubmoduleCtrl($uibModal) {
+export default function SubmoduleCtrl($uibModal) {
     this.open = function() {
         var modal = $uibModal.open({
-            template: require('./modal.html'),
+            template: template,
             controller: 'ModalCtrl',
             controllerAs: 'modal'
-        })
+        });
     };
-}
-
-module.exports = SubmoduleCtrl;
+};

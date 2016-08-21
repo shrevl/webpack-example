@@ -1,8 +1,6 @@
 /* @ngInject */
-function Modal($uibModalInstance) {
+export default function ModalCtrl($uibModalInstance) {
     this.ok = function() {
         $uibModalInstance.close();
     };
 };
-
-module.exports = Modal;
