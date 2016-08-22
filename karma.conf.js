@@ -1,23 +1,23 @@
-var webpackConfig = require('./webpack.config.js');
+var webpackConfig = require("./webpack.config.js");
 webpackConfig.entry = {};
 
 module.exports = function(config) {
 	config.set({
 
 		// base path that will be used to resolve all patterns (eg. files, exclude)
-		basePath: '',
+		basePath: "",
 
 
 		// frameworks to use
 		// available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-		frameworks: ['jasmine'],
+		frameworks: ["jasmine"],
 
 
 		// list of files / patterns to load in the browser
 		files: [
-			'app/app.js',
-			'./node_modules/angular-mocks/angular-mocks.js',
-			'app/**/*.spec.js'
+			"app/app.js",
+			"./node_modules/angular-mocks/angular-mocks.js",
+			"app/**/*.spec.js"
 		],
 
 
@@ -29,15 +29,15 @@ module.exports = function(config) {
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
-			'app/app.js': ['webpack'],
-			'app/**/*.spec.js': ['webpack']
+			"app/app.js": ["webpack"],
+			"app/**/*.spec.js": ["webpack"]
 		},
 
 
 		// test results reporter to use
-		// possible values: 'dots', 'progress'
+		// possible values: "dots", "progress"
 		// available reporters: https://npmjs.org/browse/keyword/karma-reporter
-		reporters: ['progress'],
+		reporters: ["progress"],
 
 
 		// web server port
@@ -58,7 +58,7 @@ module.exports = function(config) {
 
 		// start these browsers
 		// available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-		browsers: ['PhantomJS'],
+		browsers: ["PhantomJS"],
 
 
 		// Continuous Integration mode
@@ -72,8 +72,8 @@ module.exports = function(config) {
 		webpack: webpackConfig,
 
 		webpackMiddleware: {
-			stats: 'errors-only',
+			stats: "errors-only",
 			noInfo: true
 		}
-	})
-}
+	});
+};

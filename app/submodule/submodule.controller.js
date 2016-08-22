@@ -1,4 +1,4 @@
-import template from './modal/modal.html';
+import template from "./modal/modal.html";
 
 export default class SubmoduleController {
 	/* @ngInject */
@@ -9,8 +9,8 @@ export default class SubmoduleController {
 	open() {
 		this.$uibModal.open({
 			template: template,
-			controller: 'ModalCtrl',
-			controllerAs: 'modal'
+			controller: "ModalCtrl",
+			controllerAs: "modal"
 		});
 	}
 }

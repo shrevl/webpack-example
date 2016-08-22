@@ -1,13 +1,13 @@
-import '../assets/scss/main.scss';
-import './submodule/module';
+import "../assets/scss/main.scss";
+import "./submodule/module";
 
-import angular from 'angular';
+import angular from "angular";
 
-var app = angular.module('app', ['app.submodule']);
+var app = angular.module("app", ["app.submodule"]);
 
 app.config(/*@ngInject*/ ($locationProvider, $urlRouterProvider) => {
 	$locationProvider.html5Mode(true);
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise("/");
 });
 
 export default app;

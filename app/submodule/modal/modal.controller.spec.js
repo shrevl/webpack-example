@@ -1,19 +1,19 @@
-describe('modal.controller', () => {
-	beforeEach(angular.mock.module('app.submodule'));
+describe("modal.controller", () => {
+	beforeEach(angular.mock.module("app.submodule"));
 
 	var $controller,
 		$uibModalInstance = { close: () => {} };
 
 	beforeEach(angular.mock.inject((_$controller_) => {
-		$controller =_$controller_('ModalCtrl', { $uibModalInstance: $uibModalInstance });
+		$controller =_$controller_("ModalCtrl", { $uibModalInstance: $uibModalInstance });
 	}));
 
-	describe('ok', () => {
+	describe("ok", () => {
 		beforeEach(() => {
-			spyOn($uibModalInstance, 'close');
+			spyOn($uibModalInstance, "close");
 		});
 
-		it('should close the modal instance', () => {          
+		it("should close the modal instance", () => {          
 			$controller.ok();
 			expect($uibModalInstance.close).toHaveBeenCalled();
 		});

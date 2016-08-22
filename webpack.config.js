@@ -1,5 +1,5 @@
-var path = require('path'),
-	HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require("path"),
+	HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 	devtool: "source-map",
@@ -13,11 +13,11 @@ module.exports = {
 			{
 				test: /\.js$/, 
 				exclude: /node_modules/,
-				loaders: ['ng-annotate', 'babel?presets[]=es2015']
+				loaders: ["ng-annotate", "babel?presets[]=es2015"]
 			},
 			{
 				test: /\.html$/,
-				loader: 'raw'
+				loader: "raw"
 			},
 			{
 				test: /\.scss$/,
@@ -25,7 +25,7 @@ module.exports = {
 			},
 			{ 
 				test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
-				loader: 'url-loader?limit=10000' 
+				loader: "url-loader?limit=10000" 
 			}
 		]
 	},
